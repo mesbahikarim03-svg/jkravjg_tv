@@ -7,7 +7,25 @@
     android:background="#2E2E2E"
     tools:context=".MainActivity">
 
-    <!-- TextView لعرض الأرقام والنتائج -->
+    <!-- TextView لعرض العمليات السابقة -->
+    <TextView
+        android:id="@+id/historyTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="end"
+        android:maxLines="1"
+        android:padding="8dp"
+        android:text=""
+        android:textColor="#AAAAAA"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/resultTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- TextView لعرض الأرقام والنتائج الحالية -->
     <TextView
         android:id="@+id/resultTextView"
         android:layout_width="0dp"
@@ -16,16 +34,14 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:gravity="end"
-        android:maxLines="2"
+        android:maxLines="1"
         android:padding="16dp"
         android:text="0"
         android:textColor="@android:color/white"
         android:textSize="60sp"
         app:layout_constraintBottom_toTopOf="@+id/buttonGridLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <!-- GridLayout للأزرار -->
     <androidx.gridlayout.widget.GridLayout
@@ -46,7 +62,8 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="AC"
-            android:textColor="#FF9800"
+            android:backgroundTint="#505050"
+            android:textColor="#FFFFFF"
             android:textSize="32sp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
@@ -57,7 +74,8 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="DEL"
-            android:textColor="#FF9800"
+            android:backgroundTint="#505050"
+            android:textColor="#FFFFFF"
             android:textSize="32sp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
@@ -68,7 +86,8 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="%"
-            android:textColor="#FF9800"
+            android:backgroundTint="#505050"
+            android:textColor="#FFFFFF"
             android:textSize="32sp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
@@ -79,7 +98,8 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="/"
-            android:textColor="#FF9800"
+            android:backgroundTint="#FF9800"
+            android:textColor="@android:color/white"
             android:textSize="32sp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
@@ -91,6 +111,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="7"
+            android:backgroundTint="#3B3B3B"
             android:textColor="@android:color/white"
             android:textSize="32sp"
             app:layout_columnWeight="1"
@@ -102,6 +123,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="8"
+            android:backgroundTint="#3B3B3B"
             android:textColor="@android:color/white"
             android:textSize="32sp"
             app:layout_columnWeight="1"
@@ -113,6 +135,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="9"
+            android:backgroundTint="#3B3B3B"
             android:textColor="@android:color/white"
             android:textSize="32sp"
             app:layout_columnWeight="1"
@@ -124,7 +147,8 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="*"
-            android:textColor="#FF9800"
+            android:backgroundTint="#FF9800"
+            android:textColor="@android:color/white"
             android:textSize="32sp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
@@ -136,6 +160,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="4"
+            android:backgroundTint="#3B3B3B"
             android:textColor="@android:color/white"
             android:textSize="32sp"
             app:layout_columnWeight="1"
@@ -147,6 +172,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="5"
+            android:backgroundTint="#3B3B3B"
             android:textColor="@android:color/white"
             android:textSize="32sp"
             app:layout_columnWeight="1"
@@ -158,6 +184,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="6"
+            android:backgroundTint="#3B3B3B"
             android:textColor="@android:color/white"
             android:textSize="32sp"
             app:layout_columnWeight="1"
@@ -169,7 +196,8 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="-"
-            android:textColor="#FF9800"
+            android:backgroundTint="#FF9800"
+            android:textColor="@android:color/white"
             android:textSize="32sp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
@@ -181,6 +209,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="1"
+            android:backgroundTint="#3B3B3B"
             android:textColor="@android:color/white"
             android:textSize="32sp"
             app:layout_columnWeight="1"
@@ -192,6 +221,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="2"
+            android:backgroundTint="#3B3B3B"
             android:textColor="@android:color/white"
             android:textSize="32sp"
             app:layout_columnWeight="1"
@@ -203,6 +233,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="3"
+            android:backgroundTint="#3B3B3B"
             android:textColor="@android:color/white"
             android:textSize="32sp"
             app:layout_columnWeight="1"
@@ -214,7 +245,8 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="+"
-            android:textColor="#FF9800"
+            android:backgroundTint="#FF9800"
+            android:textColor="@android:color/white"
             android:textSize="32sp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
@@ -226,6 +258,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="0"
+            android:backgroundTint="#3B3B3B"
             android:textColor="@android:color/white"
             android:textSize="32sp"
             app:layout_columnSpan="2"
@@ -238,6 +271,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="."
+            android:backgroundTint="#3B3B3B"
             android:textColor="@android:color/white"
             android:textSize="32sp"
             app:layout_columnWeight="1"
@@ -249,11 +283,10 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:text="="
-            android:textColor="#FF9800"
+            android:backgroundTint="#FF9800"
+            android:textColor="@android:color/white"
             android:textSize="32sp"
             app:layout_columnWeight="1"
             app:layout_rowWeight="1" />
 
-    </androidx.gridlayout.widget.GridLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.gridlayout.widget.ConstraintLayout>
