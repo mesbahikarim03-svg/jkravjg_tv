@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyOfflineApp</string>
+    <string name="welcome_message">مرحبا من تطبيقك دون اتصال بالإنترنت!</string>
+</resources>
